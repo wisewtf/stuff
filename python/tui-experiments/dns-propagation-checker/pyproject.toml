@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dns-propagation-checker"
+version = "0.1.0"
+description = ""
+authors = ["Wise <wise@wise.wtf>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+urwid = "^2.1.2"
+dnspython = "^2.4.2"
+windows-curses = "^2.3.1"
+colorama = "^0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
