@@ -1,4 +1,3 @@
 # stuff
-Random stuff from yours truly
 
-Absolutely filthy random code that makes no sense and doesn't serve any purpose but bloat your system, almost.
+Absolutely filthy and non-sensical repository of random code with (almost) no utility whatsoever. Use anything herein at your own expense, but your criticism is appreciated.
