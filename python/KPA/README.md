@@ -1,6 +1,6 @@
 # KPA
 
-Simple script that checks if the given games on All Key Shops have dropped or are at 30 EURO. Because modern gaming is dead and that is the price tag I have decided makes sense to spend.
+Simple script that checks if the given games on All Key Shops have dropped under or are at 30 EURO. Because modern gaming is dead and that is the price tag I have decided makes sense to spend.
 
 ## How to use
 
