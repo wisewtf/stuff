@@ -28,7 +28,11 @@ def get_offer(product_id):
             eur_data = first_offer.get('price', {}).get('eur', {})
             price = eur_data.get('price')
             affiliate_url = first_offer.get('affiliateUrl')
-            code = eur_data.get('bestCoupon', {}).get('code')
+            if eur_data.get('bestCoupon', {}):
+                code = eur_data.get('bestCoupon', {}).get('code')
+            else:
+                code = 'no coupon'
+
             return price, affiliate_url, code
     return None, None, None
 
@@ -36,10 +40,8 @@ def main(product_ids):
     for product_id in product_ids:
         name, product_id = product_id.strip().split(', ')
         price, affiliate_url, code = get_offer(product_id)
-        print(name, price)
         if price is not None and price <= 30:
-            print("Price for", name, "is <= than 30", price)
-            message = f"<b>{name}</b> @ <b>{price}EUR</b>.\n\nGet it <a href='{affiliate_url}'>here</a> with code: <code>{code}</code>"
+            message = f"<b>{name}</b> @ <b>{price}EUR</b>.\n\nGet it <a href='{affiliate_url}'>here</a> (<code>{code}</code>)"
             send_telegram_message(message)
         else:
             exit
