@@ -37,7 +37,7 @@ def main(product_ids):
         name, product_id = product_id.strip().split(', ')
         price, affiliate_url, code = get_offer(product_id)
         print(name, price)
-        if price is not None and price <= 40:
+        if price is not None and price <= 30:
             print("Price for", name, "is <= than 30", price)
             message = f"<b>{name}</b> @ <b>{price}EUR</b>.\n\nGet it <a href='{affiliate_url}'>here</a> with code: <code>{code}</code>"
             send_telegram_message(message)
